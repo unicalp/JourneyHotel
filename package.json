@@ -1,0 +1,19 @@
+{
+  "name": "resort-map",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node backend/dist/server.js",
+    "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "minimist": "^1.2.8"
+  }
+}
